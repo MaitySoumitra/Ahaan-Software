@@ -72,11 +72,11 @@ const ContactUs = () => {
                 <strong>Phone</strong>
                 <p>
                   <a
-                    href="tel:+19043312074"
+                    href="tel:+1-777-347-1777"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    +1-904-331-2074
+                    +1-777-347-1777
                   </a>
                 </p>
                 <p>

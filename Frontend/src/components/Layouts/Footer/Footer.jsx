@@ -210,6 +210,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/solutions" className="text-decoration-none">
+                  <BsCheckLg className="quick-icon" /> Solutions
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className="text-decoration-none">
                   <BsCheckLg className="quick-icon" /> Contact
                 </a>
@@ -261,12 +266,12 @@ const Footer = () => {
                   <FaPhoneAlt className="me-2 flex-shrink-0 footer-icon" />
                   <span className="d-flex flex-wrap gap-1 add">
                     <a
-                      href="tel:+19043312074"
+                      href="tel:+1-777-347-1777"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-decoration-none "
                     >
-                      +1-904-331-2074
+                      +1-777-347-1777
                     </a>
                     <span>/</span>
                     <a

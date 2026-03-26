@@ -43,6 +43,7 @@ const Home = () => {
         <TestimonialCarousel />
         <SecondBanner />
       </Suspense>
+      
     </div>
   );
 };
