@@ -227,12 +227,19 @@ hr {
   .desktop-nav-menu {
     display: none !important;
   }
+    .phone-get-qt {
+    padding: 5px;
+    background: rgba(199, 138, 43, 0.1);
+    color: #fff ;
+    border-radius: 50%;
+    border: 1px solid #c78a2b;
+  }
 }
 @media (max-width: 450px) {
   .phone-get-qt {
     padding: 6px;
-    background-color: #000;
-    color: #c78a2b;
+    background: rgba(199, 138, 43, 0.1);
+    color: #fff ;
     border-radius: 50%;
   }
 }
@@ -257,4 +264,78 @@ hr {
   height: 2px;
   width: 100%;
   background-color: #c78a2b;
+}
+
+
+
+
+/* Existing CSS unchanged thakbe, niche ei part tuku add ba update koren */
+
+.header-right-actions {
+  display: flex;
+  align-items: center;
+}
+
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #fff; /* Gold color matching your theme */
+  font-family: 'outfit', sans-serif;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.phone-link:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.phone-icon {
+  font-size: 20px;
+}
+
+/* Tablet and Mobile logic for Phone Number */
+@media (max-width: 1200px) {
+  .phone-text {
+    display: none; /* Tablet view te sudhu icon thakbe */
+  }
+  
+  .phone-link {
+    background: rgba(199, 138, 43, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #c78a2b;
+  }
+    .phone-icon {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 769px) {
+  .header-left-part {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+    .phone-link {
+    background: rgba(199, 138, 43, 0.1);
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid #c78a2b;
+  }
+
+  /* Mobile e icon size ektu choto kora */
+  .phone-icon {
+    font-size: 20px;
+  }
+}
+
+/* Responsive adjustment for the container */
+@media (max-width: 450px) {
+  .phone-contact-wrapper {
+    margin-right: 5px;
+  }
 }

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { TbMessage } from "react-icons/tb";
+import { FiPhoneCall } from "react-icons/fi"; // Phone icon add kora hoyeche
 import MobileSidebar from "./MobileSidebar";
 import MenuToggle from "./MenuToggle";
 
@@ -11,23 +12,23 @@ const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 450);
+      setIsMobile(window.innerWidth <= 768); // Tablet and Mobile range
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -40,11 +41,10 @@ useEffect(() => {
 
   return (
     <nav
-  className={`navbar navbar-expand-lg py-2 py-lg-4 sticky-top header-main ${
-    scrolled ? "scrolled" : ""
-  }`}
->
-
+      className={`navbar navbar-expand-lg py-2 py-lg-4 sticky-top header-main ${
+        scrolled ? "scrolled" : ""
+      }`}
+    >
       <div className="container">
         <a className=" d-flex align-items-center" href="/">
           <img
@@ -56,71 +56,48 @@ useEffect(() => {
 
         <div className="header-left-side d-flex align-items-center">
           <ul className="d-flex desktop-nav-menu">
-            <li>
-              <NavLink exact="true" to="/" className="nav-link">
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" className="nav-link">
-                About us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/portfolio" className="nav-link">
-                Portfolio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/service" className="nav-link">
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/solutions" className="nav-link">
-                Solutions
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/blog" className="nav-link">
-                Blogs
-              </NavLink>
-            </li>
+            <li><NavLink exact="true" to="/" className="nav-link">Home</NavLink></li>
+            <li><NavLink to="/about" className="nav-link">About</NavLink></li>
+            <li><NavLink to="/portfolio" className="nav-link">Portfolio</NavLink></li>
+            <li><NavLink to="/service" className="nav-link">Services</NavLink></li>
+            <li><NavLink to="/blog" className="nav-link">Blogs</NavLink></li>
           </ul>
         </div>
 
-        <div className="header-left-part">
-          <div className="header-left-side">
-            <div className="get-quote-container-1">
-              {isMobile ? (
-                <a href="/contact" style={{ padding: 0 }}>
-                  <TbMessage size={35} className="phone-get-qt" />
-                </a>
-              ) : (
-                <a href="/contact" className="get-quote-btn">
-                  Get a Quote
-                </a>
-              )}
-            </div>
-
-            <div className="asc-header">
-              <MenuToggle
-                toggle={toggleSidebar}
-                isOpen={sidebarOpen}
-                ref={toggleRef}
-              />
-              <MobileSidebar
-                setSidebarOpen={setSidebarOpen}
-                isOpen={sidebarOpen}
-                toggleButtonRef={toggleRef}
-              />
-            </div>
+        <div className="header-right-actions d-flex align-items-center gap-3">
+          {/* Phone Number Section */}
+          <div className="phone-contact-wrapper">
+            <a href="tel:+1-777-347-1777" className="phone-link">
+              <FiPhoneCall className="phone-icon" />
+              <span className="phone-text">+1-777-347-1777</span>
+            </a>
           </div>
 
-          <div className="get-quote-container-2">
-            <a href="/contact" className="get-quote-btn">
-              Get a Quote
-            </a>
+          <div className="header-left-part">
+            <div className="header-left-side">
+              <div className="get-quote-container-1">
+                {isMobile ? (
+                  <a href="/contact" style={{ padding: 0 }}>
+                    <TbMessage size={32} className="phone-get-qt" />
+                  </a>
+                ) : (
+                  <a href="/contact" className="get-quote-btn">Book Free Demo</a>
+                )}
+              </div>
+
+              <div className="asc-header">
+                <MenuToggle toggle={toggleSidebar} isOpen={sidebarOpen} ref={toggleRef} />
+                <MobileSidebar
+                  setSidebarOpen={setSidebarOpen}
+                  isOpen={sidebarOpen}
+                  toggleButtonRef={toggleRef}
+                />
+              </div>
+            </div>
+
+            <div className="get-quote-container-2">
+              <a href="/contact" className="get-quote-btn">Book Free Demo</a>
+            </div>
           </div>
         </div>
       </div>
