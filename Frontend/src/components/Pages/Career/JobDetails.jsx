@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { IoMdArrowBack } from 'react-icons/io';
 import { jobs } from './jobsData';
 import './Careers.css';
+import './JobDetails.css'
 
 const JobDetails = () => {
   const { jobId } = useParams();
@@ -23,22 +24,22 @@ const JobDetails = () => {
   };
 
   return (
-    <div className="details-page">
-      <button className="back-btn" onClick={() => navigate(-1)}>
+    <div className="container">
+      <button className="job-back-btn" onClick={() => navigate(-1)}>
         <IoMdArrowBack /> Back to Careers
       </button>
 
-      <div className="details-layout">
-        <section className="content-side">
-          <div className="title-area">
+      <div className="job-details-layout">
+        <section className="job-content-side">
+          <div className="job-title-area">
             <h1>{job.designation}</h1>
-            <div className="meta-row">
+            <div className="job-meta-row">
               <span><strong>Location:</strong> {job.location}</span>
               <span><strong>Shift:</strong> {job.shift}</span>
             </div>
           </div>
 
-          <div className="description-block">
+          <div className="job-description-block">
             <h3>Job Summary</h3>
             <p>{job.summary}</p>
 
@@ -54,19 +55,19 @@ const JobDetails = () => {
           </div>
         </section>
 
-        <section className="sticky-form-side">
-          <div className="apply-card">
+        <section className="job-sticky-form-side">
+          <div className="job-apply-card">
             <h3>Apply for this position</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
               <input {...register("name", { required: true })} placeholder="Full Name" />
               <input {...register("email", { required: true })} placeholder="Email" />
               <input {...register("phone", { required: true })} placeholder="Phone" />
               <input type="number" {...register("exp", { required: true })} placeholder="Experience (Years)" />
-              <div className="file-input">
+              <div className="job-file-input">
                 <label>Upload CV (PDF/DOC)</label>
                 <input type="file" {...register("cv", { required: true })} />
               </div>
-              <button type="submit" className="submit-btn">Submit Application</button>
+              <button type="submit" className="job-submit-btn">Submit Application</button>
             </form>
           </div>
         </section>
