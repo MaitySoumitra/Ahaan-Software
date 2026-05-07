@@ -13,6 +13,14 @@ import BlogDetails from "./components/Pages/Blog/BlogDetails";
 import SearchResults from "./components/Pages/Blog/SearchResults";
 import AllDevelopment from "./components/Pages/Portfolio/Tabs-Templates/AllDevelopment";
 import AllUiUxDesign from "./components/Pages/Portfolio/Tabs-Templates/AllUiUxDesign";
+import AhaanChat from "./components/AhaanAI/AhaanChat";
+import PrivacyPolicy from "./components/QuickLinks/PrivacyPolicy";
+import CookiePolicy from "./components/QuickLinks/CookiePolicy";
+import GrievancePolicy from "./components/QuickLinks/GrievancePolicy";
+import InformationSecurityPolicy from "./components/QuickLinks/InformationSecurityPolicy";
+import IntellectualPropertyPolicy from "./components/QuickLinks/IntellectualPropertyPolicy";
+import TermsConditions from "./components/QuickLinks/TermsConditions";
+import EnvironmentalPolicy from "./components/QuickLinks/EnvironmentalPolicy";
 
 // Lazy pages
 const Home = React.lazy(() => import("./components/Pages/Home/Home"));
@@ -102,6 +110,14 @@ const AppContent = () => {
         <Route path="/search" element={<SearchResults />} />
         <Route path="/all-development" element={<AllDevelopment />} />
         <Route path="/all-design" element={<AllUiUxDesign />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/grievance-policy" element={<GrievancePolicy />} />
+        <Route path="/information-security-policy" element={<InformationSecurityPolicy />} />
+        <Route path="/intellectual-property-policy" element={<IntellectualPropertyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/environmental-policy" element={<EnvironmentalPolicy />} />
+
       </Routes>
 
       {/* FOOTER */}
@@ -122,6 +138,7 @@ function App() {
   return (
     <Router>
       <AppContent />
+      <AhaanChat/>
       <WhatsAppChat />
     </Router>
   );

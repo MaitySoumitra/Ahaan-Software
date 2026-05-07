@@ -1,0 +1,104 @@
+/* ===== SECTION ===== */
+.grievance-section {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+/* ===== BOX ===== */
+.grievance-box {
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  font-family: "Outfit", sans-serif;
+  line-height: 1.8;
+  color: #1a1a1a;
+}
+
+/* ===== HEADINGS ===== */
+.grievance-box h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.grievance-box h2 {
+  font-size: 26px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  font-weight: 800;
+}
+
+.grievance-box h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 800;
+}
+
+/* ===== TEXT ===== */
+.grievance-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== LIST ===== */
+.grievance-box ul {
+  padding-left: 20px;
+}
+
+.grievance-box li {
+  margin-bottom: 8px;
+}
+
+/* ===== TABLE ===== */
+.grievance-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.grievance-box th,
+.grievance-box td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.grievance-box th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+/* ===== HR ===== */
+.grievance-box hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 30px 0;
+}
+
+/* ===== LINKS ===== */
+.grievance-box a {
+  color: #D19628;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.grievance-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .grievance-box {
+    padding: 25px;
+  }
+
+  .grievance-box h1 {
+    font-size: 28px;
+  }
+
+  .grievance-box h2 {
+    font-size: 22px;
+  }
+}

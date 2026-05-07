@@ -1,0 +1,22 @@
+import React from 'react'
+import "./PrivacyPolicyBanner.css";
+
+const TermsBanner = () => {
+  const bannerStyle = {
+    backgroundImage: `url("https://ahaanmedia.com/ahaanwebsite/Banner/Service-Banner.webp")`,
+  };
+
+  return (
+    <section className="service-banner-section" style={bannerStyle}>
+      <div className="service-banner-overlay"></div>
+
+      <div className="container service-banner-content">
+        <div className="service-banner-text">
+          <h1 className="service-banner-title">Terms & Conditions</h1>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TermsBanner;

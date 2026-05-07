@@ -57,8 +57,16 @@ const Footer = () => {
       }}
     >
       {/* Decorative shapes */}
-      <img src="https://ahaanmedia.com/ahaanwebsite/All/footerimg2.png" alt="shape-1" className="footer-shape shape-one" />
-      <img src="https://ahaanmedia.com/ahaanwebsite/All/footerimgs1.png" alt="shape-2" className="footer-shape shape-two" />
+      <img
+        src="https://ahaanmedia.com/ahaanwebsite/All/footerimg2.png"
+        alt="shape-1"
+        className="footer-shape shape-one"
+      />
+      <img
+        src="https://ahaanmedia.com/ahaanwebsite/All/footerimgs1.png"
+        alt="shape-2"
+        className="footer-shape shape-two"
+      />
 
       <div className="container">
         <div className="row">
@@ -135,30 +143,50 @@ const Footer = () => {
                 <h5 className="footer-heading">Quick Links</h5>
               </li>
               <li>
-                <a
-                  href="../../../assets/privacy/Privacy Policy.docx"
-                  download
-                  className="text-decoration-none"
-                >
-                  <FaFileAlt className="quick-icon" /> Privacy Policy
+                <a href="/privacy-policy" className="text-decoration-none">
+                  <BsCheckLg className="quick-icon" /> Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/cookie-policy" className="text-decoration-none">
+                  <BsCheckLg className="quick-icon" /> Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a href="/grievance-policy" className="text-decoration-none">
+                  <BsCheckLg className="quick-icon" /> Grievance Policy
                 </a>
               </li>
               <li>
                 <a
-                  href="../../../assets/privacy/Shipping Policy.docx"
-                  download
+                  href="/information-security-policy"
                   className="text-decoration-none"
                 >
-                  <FaTruck className="quick-icon" /> Shipping Policy
+                  <BsCheckLg className="quick-icon" /> Information Security Policy
                 </a>
               </li>
               <li>
                 <a
-                  href="../../../assets/privacy/Terms and Conditions.docx"
-                  download
+                  href="/intellectual-property-policy"
                   className="text-decoration-none"
                 >
-                  <FaGavel className="quick-icon" /> Terms & Conditions
+                  <BsCheckLg className="quick-icon" /> Intellectual Property Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/terms-conditions"
+                  className="text-decoration-none"
+                >
+                  <BsCheckLg className="quick-icon" /> Terms Conditions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/environmental-policy"
+                  className="text-decoration-none"
+                >
+                  <BsCheckLg className="quick-icon" /> Environmental Policy
                 </a>
               </li>
             </ul>
@@ -266,12 +294,12 @@ const Footer = () => {
                   <FaPhoneAlt className="me-2 flex-shrink-0 footer-icon" />
                   <span className="d-flex flex-wrap gap-1 add">
                     <a
-                      href="tel:+1-777-347-1777"
+                      href="tel:+1-740-748-4441"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-decoration-none "
                     >
-                      +1-777-347-1777
+                      +1-740-748-4441
                     </a>
                     <span>/</span>
                     <a

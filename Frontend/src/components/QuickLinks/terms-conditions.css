@@ -1,0 +1,85 @@
+/* ===== SECTION ===== */
+.tc-section {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+/* ===== BOX ===== */
+.tc-box {
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  font-family: "Outfit", sans-serif;
+  line-height: 1.8;
+  color: #1a1a1a;
+}
+
+/* ===== HEADINGS ===== */
+.tc-box h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.tc-box h2 {
+  font-size: 26px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  font-weight: 800;
+}
+
+.tc-box h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 800;
+}
+
+/* ===== TEXT ===== */
+.tc-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== LIST ===== */
+.tc-box ul {
+  padding-left: 20px;
+}
+
+.tc-box li {
+  margin-bottom: 8px;
+}
+
+/* ===== HR ===== */
+.tc-box hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 30px 0;
+}
+
+/* ===== LINKS ===== */
+.tc-box a {
+  color: #D19628;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tc-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .tc-box {
+    padding: 25px;
+  }
+
+  .tc-box h1 {
+    font-size: 28px;
+  }
+
+  .tc-box h2 {
+    font-size: 22px;
+  }
+}

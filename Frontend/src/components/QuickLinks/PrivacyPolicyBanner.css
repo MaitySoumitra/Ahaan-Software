@@ -1,0 +1,105 @@
+/* ============================================================= */
+/* ====================== SERVICE BANNER ======================= */
+/* ============================================================= */
+
+.service-banner-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  margin-top: -120px; /* transparent header */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Dark overlay */
+.service-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Content Wrapper */
+.service-banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Text Container */
+.service-banner-text {
+  max-width: 900px;
+}
+
+/* Main Heading */
+.service-banner-title {
+  font-size: clamp(30px, 5vw, 60px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Sub Heading */
+.service-banner-subtitle {
+  font-size: clamp(14px, 2vw, 20px);
+  color: #f1f1f1;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* ============================================================= */
+/* ====================== RESPONSIVE =========================== */
+/* ============================================================= */
+
+@media (max-width: 1200px) {
+  .service-banner-section {
+    height: 550px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .service-banner-section {
+    height: 480px;
+    margin-top: -100px;
+  }
+}
+
+/* ================= MOBILE PERFECT BALANCE ================= */
+
+@media (max-width: 768px) {
+  .service-banner-section {
+    height: 420px;
+    margin-top: -90px;
+    align-items: center;
+  }
+
+  .service-banner-text {
+    transform: translateY(35px);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-banner-section {
+    height: 440px;
+    margin-top: -80px;
+  }
+
+  .service-banner-text {
+    transform: translateY(45px);
+  }
+
+  .service-banner-title {
+    line-height: 1.3;
+  }
+}

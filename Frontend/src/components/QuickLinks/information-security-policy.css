@@ -1,0 +1,85 @@
+/* ===== SECTION ===== */
+.isec-section {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+/* ===== BOX ===== */
+.isec-box {
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  font-family: "Outfit", sans-serif;
+  line-height: 1.8;
+  color: #1a1a1a;
+}
+
+/* ===== HEADINGS ===== */
+.isec-box h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.isec-box h2 {
+  font-size: 26px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  font-weight: 800;
+}
+
+.isec-box h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 800;
+}
+
+/* ===== TEXT ===== */
+.isec-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== LIST ===== */
+.isec-box ul {
+  padding-left: 20px;
+}
+
+.isec-box li {
+  margin-bottom: 8px;
+}
+
+/* ===== HR ===== */
+.isec-box hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 30px 0;
+}
+
+/* ===== LINKS ===== */
+.isec-box a {
+  color: #D19628;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.isec-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .isec-box {
+    padding: 25px;
+  }
+
+  .isec-box h1 {
+    font-size: 28px;
+  }
+
+  .isec-box h2 {
+    font-size: 22px;
+  }
+}
