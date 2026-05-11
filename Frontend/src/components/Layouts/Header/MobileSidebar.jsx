@@ -8,6 +8,7 @@ import { MdHomeRepairService } from "react-icons/md";
 import { PiFactoryFill } from "react-icons/pi";
 import { RiFileList3Fill } from "react-icons/ri";
 import { FaBloggerB } from "react-icons/fa";
+import { HiOutlineBriefcase } from "react-icons/hi";
 
 import "./MobileSidebar.css";
 
@@ -97,8 +98,14 @@ const MobileSidebar = ({ isOpen, setSidebarOpen, toggleButtonRef }) => {
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => setSidebarOpen(false)}
           >
-            <FaBloggerB style={{ marginRight: "8px", fontSize: "22px" }} />{" "}
-            Blog
+            <FaBloggerB style={{ marginRight: "8px", fontSize: "22px" }} /> Blog
+          </NavLink>
+          <NavLink
+            to="/careers"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={() => setSidebarOpen(false)}
+          >
+            <HiOutlineBriefcase style={{ marginRight: "8px", fontSize: "22px" }} /> Career
           </NavLink>
         </div>
 

@@ -60,11 +60,12 @@ const Header = () => {
             <li><NavLink to="/about" className="nav-link">About</NavLink></li>
             <li><NavLink to="/portfolio" className="nav-link">Portfolio</NavLink></li>
             <li><NavLink to="/service" className="nav-link">Services</NavLink></li>
-            <li><NavLink to="/blog" className="nav-link">Blogs</NavLink></li>
+            {/* <li><NavLink to="/blog" className="nav-link">Blogs</NavLink></li> */}
+            <li><NavLink to="/careers" className="nav-link">Career</NavLink></li>
           </ul>
         </div>
 
-        <div className="header-right-actions d-flex align-items-center gap-3">
+        <div className="header-right-actions d-flex align-items-center gap-2">
           {/* Phone Number Section */}
           <div className="phone-contact-wrapper">
             <a href="tel:+1-740-748-4441" className="phone-link">

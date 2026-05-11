@@ -21,8 +21,8 @@ import InformationSecurityPolicy from "./components/QuickLinks/InformationSecuri
 import IntellectualPropertyPolicy from "./components/QuickLinks/IntellectualPropertyPolicy";
 import TermsConditions from "./components/QuickLinks/TermsConditions";
 import EnvironmentalPolicy from "./components/QuickLinks/EnvironmentalPolicy";
-import Careers from "./components/Pages/Career/Careers";
 import JobDetails from "./components/Pages/Career/JobDetails";
+import CareerComponent from "./components/Pages/Career/CareerComponent";
 
 // Lazy pages
 const Home = React.lazy(() => import("./components/Pages/Home/Home"));
@@ -112,7 +112,7 @@ const AppContent = () => {
           path="/careers"
           element={
             <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
-              <Careers />
+              <CareerComponent />
             </Suspense>
           }
         />

@@ -162,7 +162,8 @@ const Footer = () => {
                   href="/information-security-policy"
                   className="text-decoration-none"
                 >
-                  <BsCheckLg className="quick-icon" /> Information Security Policy
+                  <BsCheckLg className="quick-icon" /> Information Security
+                  Policy
                 </a>
               </li>
               <li>
@@ -170,14 +171,12 @@ const Footer = () => {
                   href="/intellectual-property-policy"
                   className="text-decoration-none"
                 >
-                  <BsCheckLg className="quick-icon" /> Intellectual Property Policy
+                  <BsCheckLg className="quick-icon" /> Intellectual Property
+                  Policy
                 </a>
               </li>
               <li>
-                <a
-                  href="/terms-conditions"
-                  className="text-decoration-none"
-                >
+                <a href="/terms-conditions" className="text-decoration-none">
                   <BsCheckLg className="quick-icon" /> Terms Conditions
                 </a>
               </li>
@@ -243,8 +242,18 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/blog" className="text-decoration-none">
+                  <BsCheckLg className="quick-icon" /> Blogs
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className="text-decoration-none">
                   <BsCheckLg className="quick-icon" /> Contact
+                </a>
+              </li>
+              <li>
+                <a href="/careers" className="text-decoration-none">
+                  <BsCheckLg className="quick-icon" /> Career
                 </a>
               </li>
             </ul>

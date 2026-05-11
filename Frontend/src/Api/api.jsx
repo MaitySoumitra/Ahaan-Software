@@ -65,5 +65,8 @@ export const getAllUiUxDesignsAPI = async () => {
 };
 
 
-
 export default API; 
+
+
+
+
