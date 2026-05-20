@@ -1,0 +1,56 @@
+/* ============================= */
+/* CALLHIPPO MAIN CONTAINER */
+/* ============================= */
+
+#callhippo-widget-container {
+  position: fixed !important;
+  bottom: 120px !important;
+
+  /* LEFT SIDE */
+  left: 20px !important;
+  right: auto !important;
+
+  z-index: 999999 !important;
+}
+
+/* ============================= */
+/* ALL GENERATED ELEMENTS */
+/* ============================= */
+
+#callhippo-widget-container *,
+#callhippo-widget-container iframe,
+#callhippo-widget-container div,
+#callhippo-widget-container button,
+#callhippo-widget-container img {
+
+  left: 20px !important;
+  right: auto !important;
+  
+
+}
+
+/* ============================= */
+/* MOBILE + TABLET */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  #callhippo-widget-container {
+    left: 10px !important;
+    right: auto !important;
+
+    bottom: 50px !important;
+  }
+
+  #callhippo-widget-container *,
+  #callhippo-widget-container iframe,
+  #callhippo-widget-container div,
+  #callhippo-widget-container button,
+  #callhippo-widget-container img {
+
+    left: 10px !important;
+    right: auto !important;
+
+  }
+
+}

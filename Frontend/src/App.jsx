@@ -23,6 +23,7 @@ import TermsConditions from "./components/QuickLinks/TermsConditions";
 import EnvironmentalPolicy from "./components/QuickLinks/EnvironmentalPolicy";
 import JobDetails from "./components/Pages/Career/JobDetails";
 import CareerComponent from "./components/Pages/Career/CareerComponent";
+import CallHippoWidget from "./components/Layouts/Header/CallHippoWidget";
 
 // Lazy pages
 const Home = React.lazy(() => import("./components/Pages/Home/Home"));
@@ -41,6 +42,8 @@ const AppContent = () => {
 
   return (
     <>
+
+    <CallHippoWidget/>
       {/* HEADER */}
       {!hideHeaderFooterRoutes.includes(location.pathname) && <Header />}
 

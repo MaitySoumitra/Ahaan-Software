@@ -39,6 +39,20 @@ const Header = () => {
     setSidebarOpen((prev) => !prev);
   };
 
+  const openCallWidget = (e) => {
+    e.preventDefault();
+
+    const widgetButton = document.querySelector(
+      "#callhippo-widget-container button",
+    );
+
+    if (widgetButton) {
+      widgetButton.click();
+    } else {
+      alert("Call widget is loading...");
+    }
+  };
+
   return (
     <nav
       className={`navbar navbar-expand-lg py-2 py-lg-4 sticky-top header-main ${
@@ -56,12 +70,37 @@ const Header = () => {
 
         <div className="header-left-side d-flex align-items-center">
           <ul className="d-flex desktop-nav-menu">
-            <li><NavLink exact="true" to="/" className="nav-link">Home</NavLink></li>
-            <li><NavLink to="/about" className="nav-link">About</NavLink></li>
-            <li><NavLink to="/portfolio" className="nav-link">Portfolio</NavLink></li>
-            <li><NavLink to="/service" className="nav-link">Services</NavLink></li>
+            <li>
+              <NavLink exact="true" to="/" className="nav-link">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className="nav-link">
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/portfolio" className="nav-link">
+                Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/service" className="nav-link">
+                Services
+              </NavLink>
+            </li>
             {/* <li><NavLink to="/blog" className="nav-link">Blogs</NavLink></li> */}
-            <li><NavLink to="/careers" className="nav-link">Career</NavLink></li>
+            <li>
+              <NavLink to="/careers" className="nav-link">
+                Career
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className="nav-link">
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
 
@@ -78,16 +117,26 @@ const Header = () => {
             <div className="header-left-side">
               <div className="get-quote-container-1">
                 {isMobile ? (
-                  <a href="/contact" style={{ padding: 0 }}>
+                  <a href="#" onClick={openCallWidget} style={{ padding: 0 }}>
                     <TbMessage size={32} className="phone-get-qt" />
                   </a>
                 ) : (
-                  <a href="/contact" className="get-quote-btn">Book Free Demo</a>
+                  <a
+                    href="#"
+                    className="get-quote-btn"
+                    onClick={openCallWidget}
+                  >
+                    Request A Quote
+                  </a>
                 )}
               </div>
 
               <div className="asc-header">
-                <MenuToggle toggle={toggleSidebar} isOpen={sidebarOpen} ref={toggleRef} />
+                <MenuToggle
+                  toggle={toggleSidebar}
+                  isOpen={sidebarOpen}
+                  ref={toggleRef}
+                />
                 <MobileSidebar
                   setSidebarOpen={setSidebarOpen}
                   isOpen={sidebarOpen}
@@ -97,7 +146,9 @@ const Header = () => {
             </div>
 
             <div className="get-quote-container-2">
-              <a href="/contact" className="get-quote-btn">Book Free Demo</a>
+              <a href="#" className="get-quote-btn" onClick={openCallWidget}>
+                Request A Call
+              </a>
             </div>
           </div>
         </div>
