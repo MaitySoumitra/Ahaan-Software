@@ -5,6 +5,12 @@
   padding: 100px 20px;
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 /* ================= WRAPPER ================= */
 
 .contact-modern-wrapper {
