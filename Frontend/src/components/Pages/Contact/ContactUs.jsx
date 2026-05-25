@@ -178,33 +178,36 @@ const ContactUs = () => {
 
               <div className="modern-row">
                 <div className="form-group">
-  <input
-    type="tel"
-    placeholder="Phone no."
-    onInput={(e) => {
-      e.target.value = e.target.value.replace(/[^0-9+\s()-]/g, "");
-    }}
-    {...register("phone", {
-      required: "Phone number is required",
-      pattern: {
-        value: /^[+]?[\d\s()-]+$/,
-        message: "Enter a valid phone number",
-      },
-      minLength: {
-        value: 7,
-        message: "Phone number is too short",
-      },
-      maxLength: {
-        value: 15,
-        message: "Phone number is too long",
-      },
-    })}
-  />
+                  <input
+                    type="tel"
+                    placeholder="Phone no."
+                    onInput={(e) => {
+                      e.target.value = e.target.value.replace(
+                        /[^0-9+\s()-]/g,
+                        "",
+                      );
+                    }}
+                    {...register("phone", {
+                      required: "Phone number is required",
+                      pattern: {
+                        value: /^[+]?[\d\s()-]+$/,
+                        message: "Enter a valid phone number",
+                      },
+                      minLength: {
+                        value: 7,
+                        message: "Phone number is too short",
+                      },
+                      maxLength: {
+                        value: 15,
+                        message: "Phone number is too long",
+                      },
+                    })}
+                  />
 
-  {errors.phone && (
-    <p className="error">{errors.phone.message}</p>
-  )}
-</div>
+                  {errors.phone && (
+                    <p className="error">{errors.phone.message}</p>
+                  )}
+                </div>
 
                 <div className="form-group">
                   <input
@@ -250,3 +253,4 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+ 
