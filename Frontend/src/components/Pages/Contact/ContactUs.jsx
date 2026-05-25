@@ -147,32 +147,93 @@ const ContactUs = () => {
 
             <form onSubmit={handleSubmit(onSubmit)} className="modern-form">
               <div className="modern-row">
-                <input type="text" placeholder="Name" {...register("name")} />
-                <input
-                  type="email"
-                  placeholder="Email ID"
-                  {...register("email")}
-                />
+                <div className="form-group">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    {...register("name", {
+                      required: "Name is required",
+                    })}
+                  />
+
+                  {errors.name && (
+                    <p className="error">{errors.name.message}</p>
+                  )}
+                </div>
+
+                <div className="form-group">
+                  <input
+                    type="email"
+                    placeholder="Email ID"
+                    {...register("email", {
+                      required: "Email is required",
+                    })}
+                  />
+
+                  {errors.email && (
+                    <p className="error">{errors.email.message}</p>
+                  )}
+                </div>
               </div>
 
               <div className="modern-row">
-                <input
-                  type="tel"
-                  placeholder="Phone no."
-                  {...register("phone")}
-                />
-                <input
-                  type="text"
-                  placeholder="Website"
-                  {...register("website")}
-                />
+                <div className="form-group">
+  <input
+    type="tel"
+    placeholder="Phone no."
+    onInput={(e) => {
+      e.target.value = e.target.value.replace(/[^0-9+\s()-]/g, "");
+    }}
+    {...register("phone", {
+      required: "Phone number is required",
+      pattern: {
+        value: /^[+]?[\d\s()-]+$/,
+        message: "Enter a valid phone number",
+      },
+      minLength: {
+        value: 7,
+        message: "Phone number is too short",
+      },
+      maxLength: {
+        value: 15,
+        message: "Phone number is too long",
+      },
+    })}
+  />
+
+  {errors.phone && (
+    <p className="error">{errors.phone.message}</p>
+  )}
+</div>
+
+                <div className="form-group">
+                  <input
+                    type="text"
+                    placeholder="Website"
+                    {...register("website", {
+                      required: "Website is required",
+                    })}
+                  />
+
+                  {errors.website && (
+                    <p className="error">{errors.website.message}</p>
+                  )}
+                </div>
               </div>
 
-              <textarea
-                rows="5"
-                placeholder="Message"
-                {...register("message")}
-              />
+              <div className="form-group">
+                <textarea
+                  rows="5"
+                  placeholder="Message"
+                  {...register("message", {
+                    required: "Message is required",
+                  })}
+                />
+
+                {errors.message && (
+                  <p className="error">{errors.message.message}</p>
+                )}
+              </div>
 
               <button type="submit" className="modern-submit-btn">
                 SEND MESSAGE
