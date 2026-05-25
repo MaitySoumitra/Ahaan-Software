@@ -15,6 +15,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
   "https://admin.ahaanmedia.com",
+  "https://ahaan-software-admin.vercel.app",
   "https://stagging.ahaanmedia.com",
   "https://ahaan-software.vercel.app",
   "https://ahaansoftware.com",
