@@ -2,7 +2,7 @@ import "../Service/serviceBanner/ServiceBanner.css";
 
 const PortfolioSecondBannner = () => {
   const bannerStyle = {
-    backgroundImage: `url("https://ahaanmedia.com/ahaanwebsite/Banner/Portfolios.jpg")`,
+    backgroundImage: `url("https://ahaanmedia.com/ahaanwebsite/Banner/Portfolios.png")`,
   };
 
   return (
