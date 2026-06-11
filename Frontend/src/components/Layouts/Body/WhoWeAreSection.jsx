@@ -12,7 +12,7 @@ const WhoWeAreSection = () => {
           {/* Left Image Section */}
           <div className="col-lg-6 col-md-12 text-center mb-4 mb-lg-0">
             <img
-              src="https://ahaanmedia.com/ahaanwebsite/All/Who-We-Are.jpg"
+              src="https://ahaanmedia.com/ahaanwebsite/All/Wo-We-Are-2.jpg"
               alt="Mobile and Web Development"
               className="img-fluid who-we-are-image"
             />
