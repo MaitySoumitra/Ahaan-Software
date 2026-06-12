@@ -29,18 +29,18 @@ backdrop-filter: blur(1px);
   text-align: center;
   font-family: "Outfit", sans-serif;
   left: 50%;
-  top: 26%;
+  top: 22%;
   z-index: 2;
   margin: 0;
-  font-size: 100px;
+  font-size: 120px;
   font-weight: 800;
   white-space: nowrap;
   background: linear-gradient(
   to bottom,
-  #f7e5c4 0%,
-  #fde2a6 20%,
-  #fcb543 50%,
-  #a87625 100%
+  #f7e5c470 0%,
+  #fde1a68f 20%,
+  #fcb543a1 50%,
+  #a87625ab 100%
 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
