@@ -1,7 +1,7 @@
 import "./CaseStudies.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getAllCaseStudies } from "../../../api/wordpressApi";
+import { getAllCaseStudies } from "../../../Api/WordpressAPI";
 import CaseStudiesBanner from "./CaseStudiesBanner";
 
 const CaseStudies = () => {
