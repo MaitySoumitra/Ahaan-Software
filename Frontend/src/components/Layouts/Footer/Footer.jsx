@@ -233,7 +233,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-decoration-none">
+                <a href="/service" className="text-decoration-none">
                   <BsCheckLg className="quick-icon" /> Services
                 </a>
               </li>
