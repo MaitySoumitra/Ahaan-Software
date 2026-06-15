@@ -18,54 +18,58 @@ const CaseStudyDetails = () => {
   }, [slug]);
 
   const loadData = async () => {
-    const response = await getCaseStudyBySlug(slug);
+    try {
+      const response = await getCaseStudyBySlug(slug);
 
-    if (!response) return;
+      if (!response) return;
 
-    const acf = response.acf;
+      // Content আগে দেখাও
+      setData(response);
 
-    const imageMap = {};
+      const acf = response.acf;
 
-    imageMap.projectOverview = (
-      await getMediaById(acf.project_overview_image)
-    )?.source_url;
+      const mediaIds = [
+        acf.project_overview_image,
+        acf.challenges_image,
+        acf.technology_1_logo,
+        acf.technology_2_logo,
+        acf.technology_3_logo,
+        acf.technology_4_logo,
+        acf.solution_1_image,
+        acf.solution_2_image,
+        acf.solution_3_image,
+        acf.solution_4_image,
+        acf.solution_5_image,
+        acf["key_features_&_benefits_image"],
+        acf.business_impact_image,
+        acf.design_highlights_image,
+        acf.project_details_image,
+      ];
 
-    imageMap.clientBackground = (
-      await getMediaById(acf.client_background_image)
-    )?.source_url;
+      const mediaResponses = await Promise.all(
+        mediaIds.map((id) => (id ? getMediaById(id) : Promise.resolve(null))),
+      );
 
-    imageMap.challenges = (
-      await getMediaById(acf.challenges_image)
-    )?.source_url;
-
-    imageMap.tech1 = (await getMediaById(acf.technology_1_logo))?.source_url;
-
-    imageMap.tech2 = (await getMediaById(acf.technology_2_logo))?.source_url;
-
-    imageMap.tech3 = (await getMediaById(acf.technology_3_logo))?.source_url;
-
-    imageMap.tech4 = (await getMediaById(acf.technology_4_logo))?.source_url;
-
-    imageMap.solution1 = (await getMediaById(acf.solution_1_image))?.source_url;
-
-    imageMap.solution2 = (await getMediaById(acf.solution_2_image))?.source_url;
-
-    imageMap.solution3 = (await getMediaById(acf.solution_3_image))?.source_url;
-
-    imageMap.solution4 = (await getMediaById(acf.solution_4_image))?.source_url;
-
-    imageMap.featureImage = (
-      await getMediaById(acf["key_features_&_benefits_image"])
-    )?.source_url;
-
-    imageMap.results = (await getMediaById(acf.results_image))?.source_url;
-
-    imageMap.conclusion = (
-      await getMediaById(acf.conslusion_image)
-    )?.source_url;
-
-    setImages(imageMap);
-    setData(response);
+      setImages({
+        projectOverview: mediaResponses[0]?.source_url,
+        challenges: mediaResponses[1]?.source_url,
+        tech1: mediaResponses[2]?.source_url,
+        tech2: mediaResponses[3]?.source_url,
+        tech3: mediaResponses[4]?.source_url,
+        tech4: mediaResponses[5]?.source_url,
+        solution1: mediaResponses[6]?.source_url,
+        solution2: mediaResponses[7]?.source_url,
+        solution3: mediaResponses[8]?.source_url,
+        solution4: mediaResponses[9]?.source_url,
+        solution5: mediaResponses[10]?.source_url,
+        featureImage: mediaResponses[11]?.source_url,
+        businessImpact: mediaResponses[12]?.source_url,
+        designHighlights: mediaResponses[13]?.source_url,
+        projectDetails: mediaResponses[14]?.source_url,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   if (!data) return <div className="text-center py-5">Loading...</div>;
@@ -93,11 +97,15 @@ const CaseStudyDetails = () => {
       description: acf.solution_4_description,
       image: images.solution4,
     },
+    {
+      title: acf.solution_5_title,
+      description: acf.solution_5_description,
+      image: images.solution5,
+    },
   ];
 
   return (
     <div className="case-details">
-
       {/* HERO SECTION */}
       <section
         className="case-study-hero"
@@ -152,34 +160,18 @@ const CaseStudyDetails = () => {
         </div>
       </section>
 
-      {/* CLIENT BACKGROUND */}
-
-      <section className="client-background-section">
-        <div className="container">
-          <div className="row align-items-center client-row">
-            <div className="col-lg-5">
-              <img src={images.clientBackground} className="img-fluid" alt="" />
-            </div>
-
-            <div className="col-lg-7">
-              <h2>Client Background</h2>
-
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: acf.client_background,
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CHALLENGES */}
 
       <section className="challenges-section">
         <div className="container">
           <div className="row align-items-center challenges-row">
-            {/* Content Left */}
+            {/* Content Left*/}
+            <div className="col-lg-6">
+              <img src={images.challenges} className="img-fluid" alt="" />
+            </div>
+
+            {/* Image Right  */}
+
             <div className="col-lg-6">
               <h2>Challenges</h2>
 
@@ -189,10 +181,27 @@ const CaseStudyDetails = () => {
                 }}
               />
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Image Right */}
+      {/* KEY BENEFITS */}
+
+      <section className="key-benefits-section">
+        <div className="container">
+          <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src={images.challenges} className="img-fluid" alt="" />
+              <h2>Key Features & Benefits</h2>
+
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: acf["key_features_&_benefits"],
+                }}
+              />
+            </div>
+
+            <div className="col-lg-6">
+              <img src={images.featureImage} className="img-fluid" alt="" />
             </div>
           </div>
         </div>
@@ -253,45 +262,21 @@ const CaseStudyDetails = () => {
         </div>
       </section>
 
-      {/* KEY BENEFITS */}
+      {/* BUSINESS IMPACT */}
 
-      <section className="key-benefits-section">
+      <section className="business-impact-section">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <h2>Key Features & Benefits</h2>
-
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: acf["key_features_&_benefits"],
-                }}
-              />
+              <img src={images.businessImpact} className="img-fluid" alt="" />
             </div>
 
             <div className="col-lg-6">
-              <img src={images.featureImage} className="img-fluid" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* RESULTS */}
-
-      <section className="results-section">
-        <div className="container">
-          <div className="row align-items-center results-row">
-            {/* Image Left */}
-            <div className="col-lg-5">
-              <img src={images.results} className="img-fluid" alt="" />
-            </div>
-
-            {/* Content Right */}
-            <div className="col-lg-7">
-              <h2>Results</h2>
+              <h2>Business Impact</h2>
 
               <div
                 dangerouslySetInnerHTML={{
-                  __html: acf.results,
+                  __html: acf.business_impact,
                 }}
               />
             </div>
@@ -299,25 +284,61 @@ const CaseStudyDetails = () => {
         </div>
       </section>
 
-      {/* CONCLUSION */}
+      {/* DESIGN HIGHLIGHTS */}
 
-      <section className="conclusion-section">
+      <section className="design-highlights-section">
         <div className="container">
-          <div className="row align-items-center conclusion-row">
-            {/* Content Left */}
+          <div className="row align-items-center">
             <div className="col-lg-6">
-              <h2>Conclusion</h2>
+              <h2>Design Highlights</h2>
 
               <div
                 dangerouslySetInnerHTML={{
-                  __html: acf.conslusion,
+                  __html: acf.design_highlights,
                 }}
               />
             </div>
 
-            {/* Image Right */}
             <div className="col-lg-6">
-              <img src={images.conclusion} className="img-fluid" alt="" />
+              <img src={images.designHighlights} className="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY THIS PROJECT STANDS OUT */}
+
+      <section className="project-standout-section">
+        <div className="container">
+          <div className="standout-card">
+            <h2>Why This Project Stands Out</h2>
+
+            <div
+              dangerouslySetInnerHTML={{
+                __html: acf.why_this_project_stands_out,
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECT DETAILS */}
+
+      <section className="project-details-section">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <img src={images.projectDetails} className="img-fluid" alt="" />
+            </div>
+
+            <div className="col-lg-6">
+              <h2>Project Details</h2>
+
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: acf.project_details,
+                }}
+              />
             </div>
           </div>
         </div>

@@ -128,7 +128,7 @@ const Showcase = () => {
             <line x1="42" y1="44" x2="58" y2="44" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="318" y1="100" x2="318" y2="112" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="302" y1="112" x2="318" y2="112" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="180" y="82" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '16px' }}>Web/Graphics Design </text>
+            <text x="180" y="82" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '16px' }}>Web/Graphics Design </text>
 
           </g>
 
@@ -140,7 +140,7 @@ const Showcase = () => {
             <line x1="42" y1="188" x2="58" y2="188" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="278" y1="242" x2="278" y2="230" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="262" y1="242" x2="278" y2="242" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="160" y="220" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '14px' }}>UI/UX Design</text>
+            <text x="160" y="220" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '14px' }}>UI/UX Design</text>
           </g>
 
           {/* Pill 2 */}
@@ -151,7 +151,7 @@ const Showcase = () => {
             <line x1="42" y1="328" x2="58" y2="328" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="228" y1="382" x2="228" y2="370" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="212" y1="382" x2="228" y2="382" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="135" y="360" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '14px' }}>Web Development</text>
+            <text x="135" y="360" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '14px' }}>Web Development</text>
           </g>
 
           {/* Pill 3 */}
@@ -162,7 +162,7 @@ const Showcase = () => {
             <line x1="42" y1="470" x2="58" y2="470" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="302" y1="524" x2="302" y2="512" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="286" y1="524" x2="302" y2="524" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="172" y="502" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '16px' }}>IT Business Consultancy</text>
+            <text x="172" y="502" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '16px' }}>IT Business Consultancy</text>
           </g>
 
           {/* Right Pills */}
@@ -174,7 +174,7 @@ const Showcase = () => {
             <line x1="782" y1="44" x2="798" y2="44" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="1074" y1="100" x2="1074" y2="112" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="1058" y1="112" x2="1074" y2="112" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="928" y="82" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '16px' }}>Custom Web Application</text>
+            <text x="928" y="82" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '16px' }}>Custom Web Application</text>
 
           </g>
 
@@ -186,7 +186,7 @@ const Showcase = () => {
             <line x1="782" y1="188" x2="798" y2="188" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="1074" y1="244" x2="1074" y2="256" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="1058" y1="256" x2="1074" y2="256" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="928" y="226" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '14px' }}>Mobile App Design & Development</text>
+            <text x="928" y="226" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '14px' }}>Mobile App Design & Development</text>
 
           </g>
 
@@ -198,7 +198,7 @@ const Showcase = () => {
             <line x1="812" y1="328" x2="828" y2="328" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="998" y1="382" x2="998" y2="370" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="982" y1="382" x2="998" y2="382" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="905" y="360" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '13px' }}>Digital Marketing & SEO</text>
+            <text x="905" y="360" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '13px' }}>Digital Marketing & SEO</text>
           </g>
 
           {/* Pill 3 */}
@@ -209,7 +209,7 @@ const Showcase = () => {
             <line x1="782" y1="470" x2="798" y2="470" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="1050" y1="524" x2="1050" y2="512" stroke="#ffffff" strokeWidth="2.5" />
             <line x1="1034" y1="524" x2="1050" y2="524" stroke="#ffffff" strokeWidth="2.5" />
-            <text x="916" y="502" textAnchor="middle" fill="#ffffff" filter="url(#neon)" className="svgMonoText" style={{ fontSize: '14px' }}>Maintenance & Technical Support</text>
+            <text x="916" y="502" textAnchor="middle" fill="#ffffff"  className="svgMonoText" style={{ fontSize: '14px' }}>Maintenance & Technical Support</text>
           </g>
         </svg>
       </div>
