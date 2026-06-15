@@ -39,7 +39,7 @@ const UiUxDesign = () => {
 
       {/* Image Grid (ONLY 12) */}
       <div className="row g-4">
-        {designs.slice(0, 12).map((item, index) => (
+        {designs.slice(0, 6).map((item, index) => (
           <div key={item._id || index} className="col-6 col-md-4 text-center">
             <div className="uiux-image-wrapper">
               <a href={item.link} target="_blank" rel="noopener noreferrer">

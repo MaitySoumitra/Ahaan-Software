@@ -55,7 +55,7 @@ const techIconsMap = {
 };
 
 const textPairs = [
-  { title: "UI/UX Designing", subtitle: "Crafting intuitive and visually stunning user experiences." },
+  { title: "UI/UX Design", subtitle: "Crafting intuitive and visually stunning user experiences." },
   { title: "Web Development", subtitle: "Building fast, responsive, and modern web solutions." },
   { title: "E-Com Development", subtitle: "Creating seamless eCommerce experiences that sell." },
   { title: "App Development", subtitle: "Developing powerful mobile and desktop applications." },

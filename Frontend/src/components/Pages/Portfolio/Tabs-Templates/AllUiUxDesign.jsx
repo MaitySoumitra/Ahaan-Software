@@ -6,6 +6,7 @@ import SecondBanner from "../../../Layouts/Body/SecondBanner";
 
 const AllUiUxDesign = () => {
   const [designs, setDesigns] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   useEffect(() => {
     const loadDesigns = async () => {
@@ -27,29 +28,44 @@ const AllUiUxDesign = () => {
     loadDesigns();
   }, []);
 
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 8);
+  };
+
+  const visibleDesigns = designs.slice(0, visibleCount);
+
   return (
     <>
-    <AllDesignBanner/>
-    <div className="container py-5">
+      <AllDesignBanner />
 
-      <div className="all-uiux-grid">
-        {designs.map((item, index) => (
-          <a
-            key={item._id || index}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="all-uiux-card"
-          >
-            <img src={item.image} alt={item.title} />
-            <div className="all-uiux-title">{item.title}</div>
-          </a>
-        ))}
+      <div className="container py-5">
+        <div className="all-uiux-grid">
+          {visibleDesigns.map((item, index) => (
+            <a
+              key={item._id || index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="all-uiux-card"
+            >
+              <img src={item.image} alt={item.title} />
+              <div className="all-uiux-title">{item.title}</div>
+            </a>
+          ))}
+        </div>
+
+        {/* Load More Button */}
+        {visibleCount < designs.length && (
+          <div className="text-center mt-4">
+            <a className="portfolio-view-all-btn" onClick={handleLoadMore}>
+              Load More
+            </a>
+          </div>
+        )}
       </div>
-    </div>
-    <SecondBanner />
+
+      <SecondBanner />
     </>
-    
   );
 };
 

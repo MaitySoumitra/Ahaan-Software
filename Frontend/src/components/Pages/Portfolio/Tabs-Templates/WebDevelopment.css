@@ -74,8 +74,29 @@
   border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.portfolio-view-all-btn:hover {
-  background: #f3be20;
+
+.portfolio-view-all-btn::before{
+  
+   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+      background: linear-gradient(90deg, #a1947b 0%, #7e8391 100%);
+      transition: width 0.3s  ease;
+      z-index: -1;
 }
+.portfolio-view-all-btn:hover::before{
+  width: 100%;
+}
+.portfolio-view-all-btn:hover{
+  color: #ffffff;
+}
+
