@@ -23,6 +23,8 @@ import TermsConditions from "./components/QuickLinks/TermsConditions";
 import EnvironmentalPolicy from "./components/QuickLinks/EnvironmentalPolicy";
 import JobDetails from "./components/Pages/Career/JobDetails";
 import CallHippoWidget from "./components/Layouts/Header/CallHippoWidget";
+import CaseStudies from "./components/Pages/CaseStudies/CaseStudies";
+import CaseStudyDetails from "./components/Pages/CaseStudies/CaseStudyDetails";
 
 // ✅ All lazy imports together, after all normal imports
 const Home = React.lazy(() => import("./components/Pages/Home/Home"));
@@ -79,6 +81,9 @@ const AppContent = () => {
           <Route path="/careers" element={<CareerComponent />} />
           <Route path="/careers/:jobId" element={<JobDetails />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />
+
+          <Route path="/case-studies" element={<CaseStudies/>} />
+          <Route path="/case-studies/:slug" element={<CaseStudyDetails/>} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/all-development" element={<AllDevelopment />} />
           <Route path="/all-design" element={<AllUiUxDesign />} />

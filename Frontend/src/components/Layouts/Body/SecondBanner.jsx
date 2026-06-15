@@ -50,13 +50,15 @@ const CallToAction = () => {
                     marginTop: "10px",
                     cursor: "pointer",
                     textDecoration: "none",
-                    color: "inherit",
+                    color: "#fff",
                   }}
                 >
                   +1-740-748-4441
                 </a>
               </div>
             </div>
+
+            <div className="country-separator"></div>
  
             <div>
               <div style={{ lineHeight: "1.2" }}>
@@ -72,7 +74,7 @@ const CallToAction = () => {
                   India
                 </div>
                 <div
-                  style={{ cursor: "pointer", marginTop: "10px" }}
+                  style={{ cursor: "pointer", marginTop: "10px", color: "#fff" }}
                   onClick={() =>
                     window.open("https://wa.me/919830371143", "_blank")
                   }
@@ -81,17 +83,6 @@ const CallToAction = () => {
                 </div>
               </div>
             </div>
-            {/* <p onClick={() => window.open("https://wa.me/6590745876", "_blank")}>
-              <div style={{ lineHeight: "1.2",  }}>
-                <div style={{ color: "#CD912A", cursor: "pointer", fontSize: isMobile ? "14px" : "20px", fontWeight: "bold", textTransform: "uppercase" }}>Singapore</div>
-                <div
-                  style={{  cursor: "pointer", marginTop: "10px" }}
-                  onClick={() => window.open("https://wa.me/6590745876", "_blank")}
-                >
-                  +65-9074-5876
-                </div>
-              </div>
-            </p> */}
           </div>
         </div>
  

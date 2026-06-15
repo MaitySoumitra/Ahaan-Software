@@ -1,0 +1,153 @@
+.case-studies-page {
+  background: #f0f0f0;
+  padding: 80px 0;
+}
+
+.case-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Card */
+
+.case-card {
+  background: #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Top Area */
+
+.case-card-top {
+  background: #fff;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.case-logo {
+  max-width: 500px;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Bottom Area */
+
+.case-card-bottom {
+  background: #e7e7e7;
+  padding: 28px;
+}
+
+.case-card-bottom h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #CD8B28;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Description */
+
+.case-desc {
+  min-height: 130px;
+}
+
+.case-desc p {
+  margin: 0;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Button */
+
+.case-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+
+  background: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+
+  padding: 14px;
+  border-radius: 50px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.case-btn:hover {
+  background: #CD8B28;
+  color: #000;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .case-container {
+    padding: 0 20px;
+  }
+
+  .case-card-top {
+    height: 220px;
+  }
+
+  .case-logo {
+    max-width: 220px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .case-studies-page {
+    padding: 50px 0;
+  }
+
+  .case-container {
+    padding: 0 15px;
+  }
+
+  .case-card-top {
+    height: 180px;
+    padding: 20px;
+  }
+
+  .case-logo {
+    max-width: 180px;
+  }
+
+  .case-card-bottom {
+    padding: 20px;
+  }
+
+  .case-card-bottom h3 {
+    font-size: 18px;
+  }
+
+  .case-desc {
+    min-height: auto;
+  }
+
+  .case-desc p {
+    font-size: 15px;
+  }
+}

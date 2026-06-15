@@ -19,6 +19,21 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.country-separator {
+  width: 2px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .country-separator {
+    height: 40px;
+    margin: 0 15px;
+  }
+}
  
 .second-banner-req-call::before {
   content: "";
