@@ -1,11 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn,FaIndustry  } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { HiHome } from "react-icons/hi2";
 import { BiSolidMessageSquareEdit } from "react-icons/bi";
 import { MdHomeRepairService } from "react-icons/md";
-import { PiFactoryFill } from "react-icons/pi";
 import { RiFileList3Fill } from "react-icons/ri";
 import { FaBloggerB } from "react-icons/fa";
 import { BsFillSuitcaseLgFill } from "react-icons/bs";
@@ -90,7 +89,7 @@ const MobileSidebar = ({ isOpen, setSidebarOpen, toggleButtonRef }) => {
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => setSidebarOpen(false)}
           >
-            <PiFactoryFill style={{ marginRight: "8px", fontSize: "22px" }} />{" "}
+            <FaIndustry  style={{ marginRight: "8px", fontSize: "22px" }} />{" "}
             Solutions
           </NavLink>
           <NavLink
