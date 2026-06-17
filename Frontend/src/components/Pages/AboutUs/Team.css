@@ -8,6 +8,14 @@
   font-family: 'Outfit', sans-serif;
 }
 
+.designation{
+  color: #ebb800 !important;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Outfit', sans-serif;
+  line-height: 40px;
+}
+
 .subtitle .divider{
  display: inline-block;
   width: 0;

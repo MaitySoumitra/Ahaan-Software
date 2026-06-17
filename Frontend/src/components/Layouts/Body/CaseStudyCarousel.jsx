@@ -98,7 +98,7 @@ const CaseStudyCarousel = () => {
 
         {/* 🔹 Right-Aligned Button */}
         <div className="view-all-btn d-flex justify-content-end mt-4 mb-4">
-          <a href="/portfolio" className="text-decoration-none">
+          <a href="/case-studies" className="text-decoration-none">
             View All →
           </a>
         </div>

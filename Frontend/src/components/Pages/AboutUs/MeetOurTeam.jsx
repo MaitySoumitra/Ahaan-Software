@@ -76,7 +76,7 @@ const MeetOurTeam = () => {
                   className="team-carousel-img"
                 />
                 <h5 className="mt-3">{member.name}</h5>
-                <p className="text-muted">{member.position}</p>
+                <p className="designation">{member.position}</p>
               </div>
             </SwiperSlide>
           ))}

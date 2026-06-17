@@ -19,11 +19,10 @@ const Banner = () => {
             <h1 className="about-banner-heading">About Us</h1>
 
             <p className="about-banner-subtitle">
-  Empowering businesses through innovation, creativity, and 
-  technology-driven transformation that accelerates growth, 
-  enhances efficiency, and builds long-term digital success.
-</p>
-
+              Empowering businesses through innovation, creativity, and
+              technology-driven transformation that accelerates growth, enhances
+              efficiency, and builds long-term digital success.
+            </p>
           </div>
         </div>
       </section>
@@ -34,7 +33,7 @@ const Banner = () => {
         <div className="row align-items-center mb-5">
           <div className="col-md-6 team-discus-desktop">
             <img
-              src="https://ahaanmedia.com/ahaanwebsite/All/group1.webp"
+              src="https://ahaanmedia.com/ahaanwebsite/All/ASC-Team.png"
               alt="Team Discussion"
               className="img-fluid rounded"
             />
