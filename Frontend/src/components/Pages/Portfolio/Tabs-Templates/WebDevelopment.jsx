@@ -135,9 +135,9 @@ const WebDevelopment = () => {
       </div>
 
       <div className="text-center mt-5">
-        <Link to="/all-development" className="portfolio-view-all-btn">
+        <a href="/all-development" className="portfolio-view-all-btn">
           View All
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -22,6 +22,7 @@ const TestimonialCarousel = lazy(
 );
 const SecondBanner = lazy(() => import("../../Layouts/Body/SecondBanner"));
 import "./Home.css";
+// import ExtraHeroBanner from "./ExtraHeroBanner";
 const Home = () => {
   return (
     <div>
@@ -39,6 +40,8 @@ const Home = () => {
         }
       >
         <WhoWeAreSection />
+
+        {/* <ExtraHeroBanner /> */}
         <ServicesSection />
         <ThirdSection />
         <ConnectSection />

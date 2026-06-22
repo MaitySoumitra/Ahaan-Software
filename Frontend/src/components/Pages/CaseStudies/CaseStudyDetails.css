@@ -42,11 +42,13 @@
   }
 
   .project-overview-section h2 {
-    font-size: 38px;
+    font-size: 28px;
   }
 
   .project-overview-section img {
     margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -58,7 +60,7 @@
   }
 
   .project-overview-section h2 {
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 20px;
   }
 
@@ -642,6 +644,11 @@
 
   .hero-title {
     font-size: 42px;
+    text-align: center;
+  }
+   .hero-description {
+    text-align: center;
+    font-size: 16px;
   }
 
   .hero-feature-image {
@@ -715,6 +722,95 @@
   box-shadow:
     -20px 20px 30px rgba(0, 0, 0, 0.4),
     -35px 35px 30px rgba(135, 135, 135, 0.4);
+}
+
+/* =========================
+   Tablet (768px - 991px)
+========================= */
+@media (max-width: 991px) {
+  .business-impact-section,
+  .design-highlights-section,
+  .project-details-section,
+  .project-standout-section {
+    padding: 60px 0;
+  }
+
+  .business-impact-section h2,
+  .design-highlights-section h2,
+  .project-details-section h2,
+  .project-standout-section h2 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .business-impact-section li,
+  .design-highlights-section li,
+  .project-details-section li,
+  .project-standout-section li {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .business-impact-section img,
+  .design-highlights-section img,
+  .project-details-section img {
+    margin-top: 25px;
+
+    box-shadow:
+      -10px 10px 20px rgba(0, 0, 0, 0.3),
+      -20px 20px 20px rgba(135, 135, 135, 0.3);
+  }
+}
+
+
+/* =========================
+   Mobile (767px and below)
+========================= */
+@media (max-width: 767px) {
+  .business-impact-section,
+  .design-highlights-section,
+  .project-details-section,
+  .project-standout-section {
+    padding: 40px 0;
+  }
+
+  .business-impact-section h2,
+  .design-highlights-section h2,
+  .project-details-section h2,
+  .project-standout-section h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .business-impact-section ul,
+  .design-highlights-section ul,
+  .project-details-section ul,
+  .project-standout-section ul {
+    padding-left: 18px;
+  }
+
+  .business-impact-section li,
+  .design-highlights-section li,
+  .project-details-section li,
+  .project-standout-section li {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  .business-impact-section img,
+  .design-highlights-section img,
+  .project-details-section img {
+    margin-top: 20px;
+    border-radius: 15px;
+
+    box-shadow:
+      -6px 6px 15px rgba(0, 0, 0, 0.25),
+      -12px 12px 15px rgba(135, 135, 135, 0.25);
+  }
 }
 
 .project-standout-section {

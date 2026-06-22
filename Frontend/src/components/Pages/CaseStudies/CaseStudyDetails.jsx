@@ -175,13 +175,13 @@ const CaseStudyDetails = () => {
           <div className="container">
             <div className="row align-items-center challenges-row">
               {/* Content Left*/}
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-2 order-lg-1">
                 <img src={images.challenges} className="img-fluid" alt="" />
               </div>
 
               {/* Image Right  */}
 
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-1 order-lg-2">
                 <h2>Challenges</h2>
 
                 <div
@@ -285,11 +285,11 @@ const CaseStudyDetails = () => {
         <section className="business-impact-section">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-2 order-lg-1">
                 <img src={images.businessImpact} className="img-fluid" alt="" />
               </div>
 
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-1 order-lg-2">
                 <h2>Business Impact</h2>
 
                 <div

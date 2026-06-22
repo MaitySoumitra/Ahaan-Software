@@ -85,9 +85,9 @@ const UiUxDesign = () => {
 
       {!loading && designs.length > 2 && (
         <div className="text-center mt-5">
-          <Link to="/all-design" className="portfolio-view-all-btn">
+          <a href="/all-design" className="portfolio-view-all-btn">
             View All
-          </Link>
+          </a>
         </div>
       )}
     </div>

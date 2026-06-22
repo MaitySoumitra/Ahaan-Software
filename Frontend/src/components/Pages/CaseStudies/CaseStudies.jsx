@@ -13,7 +13,7 @@ const CaseStudies = () => {
 
   const loadCaseStudies = async () => {
     const data = await getAllCaseStudies();
-    setCaseStudies(data);
+    setCaseStudies([...data].reverse());
   };
 
   return (
@@ -45,12 +45,12 @@ const CaseStudies = () => {
                       }}
                     />
 
-                    <Link
-                      to={`/case-studies/${item.slug}`}
+                    <a
+                      href={`/case-studies/${item.slug}`}
                       className="case-btn"
                     >
                       View Details
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
