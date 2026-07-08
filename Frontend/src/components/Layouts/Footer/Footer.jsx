@@ -339,7 +339,7 @@ const Footer = () => {
           {/* Footer Bottom */}
           <div className="footer-bottom mt-4 pt-3">
             <p
-              className="footer-bottom-text mb-2 text-left"
+              className="footer-bottom-text mb-2"
               style={{ color: "#a3a3a3ff" }}
             >
               {isMobile
@@ -347,7 +347,7 @@ const Footer = () => {
                 : "© 2026 Ahaan Software, All rights reserved."}
             </p>
 
-            <div className="footer-social-icons text-center">
+            <div className="footer-social-icons ">
               <a
                 href="https://www.facebook.com/ahaansoftwareconsulting"
                 target="_blank"
