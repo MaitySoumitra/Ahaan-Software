@@ -85,13 +85,14 @@
   border-radius: 50px;
   padding: 14px 34px;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 10px;
   letter-spacing: 0.5px;
   text-decoration: none;
   display: inline-block;
+  font-family: "Outfit", sans-serif;
 }
 
 .banner-btn:hover {
