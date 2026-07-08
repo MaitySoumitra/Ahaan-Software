@@ -87,7 +87,7 @@ const CallToAction = () => {
         </div>
  
         <a className=" newsletter-button" href="/contact">
-          <span> {isOnlyMObile ? "Contact" : "Contact Now"} </span>
+          <span> {isOnlyMObile ? "Talk to a Technology Consultant" : "Talk to a Technology Consultant"} </span>
         </a>
       </div>
     </div>
