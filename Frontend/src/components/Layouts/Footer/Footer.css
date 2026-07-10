@@ -463,6 +463,10 @@ hr {
     text-align: center;
   }
 
+  .footer-social-icons{
+    gap: 10px;
+  }
+
 }
 
 
