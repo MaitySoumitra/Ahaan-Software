@@ -13,7 +13,7 @@ import { FaCodeCompare } from "react-icons/fa6";
 import { TiUserAdd } from "react-icons/ti";
 import { FaUsers } from "react-icons/fa6";
 import { IoMdLogOut } from "react-icons/io";
-
+import "./SidebarTopbar.css";
 import { toast } from "react-toastify";
 
 const Sidebar = () => {
@@ -210,16 +210,9 @@ const Sidebar = () => {
           }}
         >
           <button
-            className="btn w-100 text-light"
+            className="logout-btn"
             onClick={handleLogout}
-            style={{
-              background: "#ff3131ff",
-              fontWeight: "600",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "8px",
-            }}
+          
           >
             <IoMdLogOut /> Logout
           </button>

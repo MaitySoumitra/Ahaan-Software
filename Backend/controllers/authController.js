@@ -9,7 +9,6 @@ User.prototype.generateJWT = function () {
       id: this._id,
       role: this.role,
       designation: this.designation,
-      
     },
     process.env.JWT_SECRET,
     { expiresIn: "7d" },
@@ -87,9 +86,13 @@ exports.loginUser = async (req, res) => {
       user: {
         id: user._id,
         name: user.name,
+        email: user.email,
         role: user.role,
+        status: user.status,
         designation: user.designation,
-        profilePicture: user.profilePicture, // FULL URL
+        profilePicture: user.profilePicture,
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
       },
     });
   } catch (error) {
@@ -100,12 +103,11 @@ exports.loginUser = async (req, res) => {
 
 exports.approveUser = async (req, res) => {
   try {
-
     // Only Super Admin can approve users
     if (req.user.role !== "super_admin") {
       return res.status(403).json({
         success: false,
-        message: "Only Super Admin can approve users."
+        message: "Only Super Admin can approve users.",
       });
     }
 
@@ -114,14 +116,14 @@ exports.approveUser = async (req, res) => {
     if (!user) {
       return res.status(404).json({
         success: false,
-        message: "User not found"
+        message: "User not found",
       });
     }
 
     if (user.status === "approved") {
       return res.status(400).json({
         success: false,
-        message: "User is already approved."
+        message: "User is already approved.",
       });
     }
 
@@ -130,17 +132,15 @@ exports.approveUser = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "User approved successfully"
+      message: "User approved successfully",
     });
-
   } catch (err) {
     res.status(500).json({
       success: false,
-      message: err.message
+      message: err.message,
     });
   }
 };
-
 
 exports.rejectUser = async (req, res) => {
   try {
@@ -161,11 +161,11 @@ exports.rejectUser = async (req, res) => {
     }
 
     if (user.status === "rejected") {
-    return res.status(400).json({
-        success:false,
-        message:"User already rejected."
-    });
-}
+      return res.status(400).json({
+        success: false,
+        message: "User already rejected.",
+      });
+    }
 
     user.status = "rejected";
 
@@ -175,9 +175,6 @@ exports.rejectUser = async (req, res) => {
       success: true,
       message: "User rejected successfully",
     });
-
-
-
   } catch (err) {
     res.status(500).json({
       success: false,
@@ -204,7 +201,7 @@ exports.getAllUsers = async (req, res) => {
     if (req.user.role !== "super_admin") {
       return res.status(403).json({
         success: false,
-        message: "Only Super Admin can access."
+        message: "Only Super Admin can access.",
       });
     }
 
@@ -212,40 +209,37 @@ exports.getAllUsers = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      users
+      users,
     });
-
   } catch (err) {
     res.status(500).json({
       success: false,
-      message: err.message
+      message: err.message,
     });
   }
 };
 
 exports.getUsersByStatus = async (req, res) => {
   try {
-
     if (req.user.role !== "super_admin") {
       return res.status(403).json({
         success: false,
-        message: "Only Super Admin can access."
+        message: "Only Super Admin can access.",
       });
     }
 
     const users = await User.find({
-      status: req.params.status
+      status: req.params.status,
     }).select("-password");
 
     res.status(200).json({
       success: true,
-      users
+      users,
     });
-
   } catch (err) {
     res.status(500).json({
       success: false,
-      message: err.message
+      message: err.message,
     });
   }
 };
