@@ -33,6 +33,7 @@ import PendingUser from "./Components/Pages/PendingUser";
 import AcceptUser from "./Components/Pages/AcceptUser";
 import RejectUser from "./Components/Pages/RejectUser";
 import PageLoader from "./Components/Common/PageLoader";
+import Profile from "./Components/Pages/Profile";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -137,6 +138,8 @@ const LayoutWrapper = () => {
             <Route path= "/approved-users" element={<AcceptUser/>} />
             <Route path= "/rejected-users" element={<RejectUser/>}/>
 
+            
+            <Route path= "/profile" element={<Profile/>}/>
 
             {/* 404 */}
             <Route path="*" element={<h2>404 - Page Not Found</h2>} />

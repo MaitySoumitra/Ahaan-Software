@@ -9,7 +9,7 @@ import {
   WiSnow,
   WiDayHaze,
 } from "react-icons/wi";
-
+import { useNavigate } from "react-router-dom";
 import { profileAPI } from "../Api/api";
 import { SearchContext } from "../../searchContext";
 
@@ -21,6 +21,8 @@ export default function Topbar() {
 
   const { query, setQuery } = useContext(SearchContext);
   const [filtered, setFiltered] = useState([]);
+
+  const navigate = useNavigate();
 
   const searchData = [
     { id: 1, name: "Dashboard", route: "/" },
@@ -38,8 +40,8 @@ export default function Topbar() {
 
     setFiltered(
       searchData.filter((item) =>
-        item.name.toLowerCase().includes(query.toLowerCase())
-      )
+        item.name.toLowerCase().includes(query.toLowerCase()),
+      ),
     );
   }, [query]);
 
@@ -59,7 +61,7 @@ export default function Topbar() {
     const fetchWeather = async () => {
       try {
         const res = await fetch(
-          "https://api.openweathermap.org/data/2.5/weather?q=Kolkata&appid=082f135195d80501379a461dbad34d4c&units=metric"
+          "https://api.openweathermap.org/data/2.5/weather?q=Kolkata&appid=082f135195d80501379a461dbad34d4c&units=metric",
         );
         const data = await res.json();
         const hour = new Date().getHours();
@@ -202,9 +204,12 @@ export default function Topbar() {
     )} */}
         </div>
 
-
         {/* USER */}
-        <div className="d-flex align-items-center">
+        <div
+          className="d-flex align-items-center"
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/profile")}
+        >
           <img
             src={
               user?.profilePicture
@@ -220,9 +225,7 @@ export default function Topbar() {
           <div>
             <span className="fw-bold">{user?.name || "Loading..."}</span>
             <br />
-            <small className="text-success">
-              {user?.role || "Role"}
-            </small>
+            <small className="text-success">{user?.role || "Role"}</small>
           </div>
         </div>
       </div>

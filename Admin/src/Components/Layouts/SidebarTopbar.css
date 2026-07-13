@@ -1,0 +1,99 @@
+/* ===========================
+   LOGOUT BUTTON
+=========================== */
+
+.logout-btn {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #ff4d4d 0%, #ff2f2f 45%, #ff1f1f 100%);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all .35s ease;
+  box-shadow: 0 10px 25px rgba(255, 49, 49, .35);
+}
+
+/* Continuous Shine Effect */
+.logout-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.35),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: logoutShine 2.8s linear infinite;
+}
+
+@keyframes logoutShine {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 180%;
+  }
+}
+
+/* Hover */
+.logout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 49, 49, .5);
+}
+
+/* Click */
+.logout-btn:active {
+  transform: scale(.96);
+}
+
+/* Icon */
+.logout-icon {
+  font-size: 20px;
+  animation: floatIcon 1.8s ease-in-out infinite;
+}
+
+/* Icon Hover */
+.logout-btn:hover .logout-icon {
+  transform: rotate(-20deg);
+}
+
+/* Floating Animation */
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-4px);
+  }
+}
+
+/* Text */
+.logout-btn span {
+  letter-spacing: .4px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Icon Above Shine */
+.logout-icon {
+  position: relative;
+  z-index: 2;
+}

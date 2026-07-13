@@ -64,15 +64,6 @@ const Dashboard = () => {
     },
   };
 
-  const donutChart = {
-    series: [55, 33, 12],
-    options: {
-      labels: ["YouTube", "Facebook", "Direct Search"],
-      colors: ["#ff3e6c", "#6c63ff", "#f8b400"],
-      legend: { position: "bottom" },
-    },
-  };
-
   return (
     <div className="container-fluid p-4">
       {/* TOP CARDS */}

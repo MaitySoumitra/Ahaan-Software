@@ -1,49 +1,239 @@
+/* ==========================
+   DASHBOARD
+========================== */
+
+.container-fluid {
+  background: transparent !important;
+}
+
+/* ==========================
+   DASHBOARD CARD
+========================== */
+
 .dash-card {
-  height: 120px;
-  border-radius: 20px;
+  height: 125px;
+  border-radius: 10px !important;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.container-fluid {
-  background: none !important;
-}
-
-.pink-card {
-  background: linear-gradient(to right, #ff4b8d, #ff7bc2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all .35s ease;
 }
 
-.purple-card {
-  background: linear-gradient(to right, #48a43e, #88c572);
+/* Shine Effect */
+
+.dash-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -180%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.28),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: cardShine 3s linear infinite;
+  z-index: 1;
 }
 
-.blue-card {
-  background: linear-gradient(to right, #4a90e2, #6ec6ff);
+@keyframes cardShine {
+
+  0%{
+    left:-180%;
+  }
+
+  100%{
+    left:180%;
+  }
+
 }
 
-.orange-card {
-  background: linear-gradient(to right, #ff914d, #ffbe3d);
+/* Hover */
+
+.dash-card:hover{
+  transform: translateY(-8px) scale(1.02);
 }
 
-.mini-card {
-  border-radius: 20px;
+/* ==========================
+   CARD COLORS
+========================== */
+
+.pink-card{
+background:linear-gradient(135deg,#0c0c0c,#3d3d3d);
+  
 }
 
-.yellow-card {
-  background: linear-gradient(to right, #f8b400, #ffd464);
+.pink-card:hover{
+  box-shadow:0 20px 45px #3d3d3d;
 }
 
-.card {
-  border: none;
-  border-radius: 20px;
+.purple-card{
+background:linear-gradient(135deg,#0c0c0c,#3d3d3d);
+  
 }
-.dashboard-heading {
-  font-family: outfit;
-  font-weight: 600;
-  letter-spacing: 2px;
+
+.purple-card:hover{
+  box-shadow:0 20px 45px #3d3d3d;
 }
-.dashboard-count {
-  font-family: outfit;
-  font-weight: 800;
-  text-transform: uppercase;
+
+.blue-card{
+background:linear-gradient(135deg,#0c0c0c,#3d3d3d);
+  
+}
+
+.blue-card:hover{
+  box-shadow:0 20px 45px #3d3d3d;
+}
+
+.orange-card{
+  background:linear-gradient(135deg,#0c0c0c,#3d3d3d);
+  
+}
+
+.orange-card:hover{
+  box-shadow:0 20px 45px #3d3d3d;
+}
+
+/* ==========================
+   ICON
+========================== */
+
+.dash-card svg{
+  transition:.45s;
+  z-index:2;
+}
+
+.dash-card:hover svg{
+  transform:scale(1.18) rotate(8deg);
+  opacity:.35 !important;
+}
+
+/* Floating Animation */
+
+.dash-card svg{
+  animation:floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon{
+
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-6px);
+  }
+
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.dashboard-heading{
+  position:relative;
+  z-index:2;
+  font-family:"Outfit",sans-serif;
+  font-size:28px;
+  font-weight:700;
+  color:#efbc05;
+  letter-spacing:1px;
+  transition:.35s;
+}
+
+.dashboard-count{
+  position:relative;
+  z-index:2;
+  font-family:"Outfit",sans-serif;
+  font-size:25px;
+  font-weight:800;
+  color:#fff9e3;
+  line-height:1;
+  margin-top:6px;
+}
+
+.dash-card:hover .dashboard-heading{
+  letter-spacing:2px;
+}
+
+
+@keyframes pulseCount{
+
+  0%,100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.06);
+  }
+
+}
+
+/* ==========================
+   MINI CARD
+========================== */
+
+.mini-card{
+  border-radius:20px;
+}
+
+.yellow-card{
+  background:linear-gradient(to right,#f8b400,#ffd464);
+}
+
+/* ==========================
+   COMMON CARD
+========================== */
+
+.card{
+  border:none;
+  border-radius:20px;
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+  .dash-card{
+    height:130px;
+  }
+
+  .dashboard-heading{
+    font-size:26px;
+  }
+
+  .dashboard-count{
+    font-size:40px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .dash-card{
+    height:120px;
+  }
+
+  .dashboard-heading{
+    font-size:22px;
+  }
+
+  .dashboard-count{
+    font-size:34px;
+  }
+
 }

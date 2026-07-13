@@ -9,9 +9,10 @@ textarea.form-control.styled-input{
 }
 .admin-search-box{
   border: none !important;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
   height: 45px;
-  border-radius: 50px !important;
-  border: 1px solid #fbeba2 !important;
-  background-color: #fefcf2 !important;
+  border-radius: 10px !important;
+  border: 1px solid #1c1c1c !important;
+  background-color: #ededed !important;
+  color: #000 !important;
 }
