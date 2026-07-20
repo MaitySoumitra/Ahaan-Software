@@ -290,7 +290,7 @@
 
 @media (max-width: 576px) {
   .about-section {
-    margin-top: 15em;
+    /* margin-top: 15em; */
     padding: 40px 15px;
   }
 

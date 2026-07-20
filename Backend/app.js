@@ -58,6 +58,7 @@ app.use("/api/team", require("./routes/teamRoutes"));
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/designs", require("./routes/designRoutes"));
 app.use("/api/developments", require("./routes/developmentRoutes"));
+app.use("/api/newsletter", require("./routes/newsletterRoutes"));
 
 // SOCKET.IO Setup
 const http = require("http").createServer(app);

@@ -34,6 +34,7 @@ import AcceptUser from "./Components/Pages/AcceptUser";
 import RejectUser from "./Components/Pages/RejectUser";
 import PageLoader from "./Components/Common/PageLoader";
 import Profile from "./Components/Pages/Profile";
+import Newsletter from "./Components/Pages/Newsletter";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -112,6 +113,7 @@ const LayoutWrapper = () => {
             {/* CONNECT */}
             <Route path="/connect-form" element={<ConnectForm />} />
             <Route path="/contact-form" element={<ContactForm />} />
+            <Route path="/newsletter" element={<Newsletter/>}/>
 
             {/* CHAT */}
             <Route path="/chat" element={<AdminChatPage />} />

@@ -18,6 +18,8 @@ import { toast } from "react-toastify";
 import { MdPendingActions } from "react-icons/md";
 import { HiClipboardCheck } from "react-icons/hi";
 import { RiFileCloseFill } from "react-icons/ri";
+import { FaRegPaperPlane } from "react-icons/fa6";
+
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -64,6 +66,8 @@ const Sidebar = () => {
     { section: "Connect" },
     { label: "Connect Form", icon: <GrConnect className="me-2" />, path: "/connect-form" },
     { label: "Contact Us Form", icon: <GrContactInfo className="me-2" />, path: "/contact-form" },
+    { label: "Newsletter Form", icon: <FaRegPaperPlane className="me-2" />, path: "/newsletter" },
+
 
     { section: "Designfolio" },
     { label: "Add Design", icon: <MdOutlineDesignServices className="me-2" />, path: "/add-design" },
