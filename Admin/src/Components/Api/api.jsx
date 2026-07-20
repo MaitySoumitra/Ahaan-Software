@@ -108,4 +108,14 @@ export const approveUserAPI = (id) =>
 export const rejectUserAPI = (id) =>
   API.put(`/auth/reject/${id}`);
 
+export const getNewsletterSubscribers = async () => {
+  try {
+    const response = await API.get("/newsletter");
+    return response.data;
+  } catch (error) {
+    console.error("❌ Error fetching newsletter:", error);
+    throw error;
+  }
+};
+
 export default API;

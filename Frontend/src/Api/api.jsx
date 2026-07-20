@@ -64,6 +64,17 @@ export const getAllUiUxDesignsAPI = async () => {
   }
 };
 
+// ➤ Subscribe Newsletter
+export const subscribeNewsletter = async (data) => {
+  try {
+    const response = await API.post("/newsletter", data);
+    return response.data;
+  } catch (error) {
+    console.error("❌ Error subscribing newsletter:", error);
+    throw error;
+  }
+};
+
 
 export default API; 
 

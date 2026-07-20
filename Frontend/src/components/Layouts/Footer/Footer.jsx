@@ -16,6 +16,7 @@ import { FiDribbble } from "react-icons/fi";
 import { FaFileAlt, FaTruck, FaGavel, FaBehance, FaGithub } from "react-icons/fa";
 import "./Footer.css";
 import PayglocalButton from "../../PayGlocal/PayglocalButton";
+import { subscribeNewsletter } from "../../../Api/api";
 
 const Footer = () => {
   const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
@@ -40,11 +41,20 @@ const Footer = () => {
   }, []);
 
   // ✅ Now only console log (Later you will connect API here)
-  const onSubmit = (data) => {
-    console.log("Newsletter Form Data:", data);
-    toast.success("Form captured successfully!");
-    reset();
-  };
+const onSubmit = async (data) => {
+  try {
+    const result = await subscribeNewsletter(data);
+
+    if (result.success) {
+      toast.success(result.message);
+      reset();
+    }
+  } catch (error) {
+    toast.error(
+      error.response?.data?.message || "Something went wrong"
+    );
+  }
+};
 
   return (
     <footer
