@@ -24,6 +24,10 @@ const BlogForm = () => {
     formData.append("content", content);
     formData.append("image", data.image[0]);
 
+    const apiKey = "r1zfinrrh0tqrbcpfar1ovisttlkimq7podofkni7z3rv31s";
+
+console.log("API KEY:", apiKey);
+
     try {
       const res = await fetch("https://ahaansoftware.com/update-json.php", {
         method: "POST",
@@ -89,7 +93,8 @@ const BlogForm = () => {
           <div className="form-group">
             <label className="form-label">Content</label>
             <Editor
-              apiKey="am0ed4z2fbqy58z28jljxlbija11pzhb7v312hypbfhvcy2b" // your API key
+              apiKey="r1zfinrrh0tqrbcpfar1ovisttlkimq7pdoffkni7z3rv31s"
+              
               value={content}
               onEditorChange={(newContent) => setContent(newContent)}
               init={{
